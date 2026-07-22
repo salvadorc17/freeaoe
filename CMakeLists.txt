@@ -5,6 +5,7 @@ else()
  cmake_minimum_required(VERSION 3.9)
 endif()
 
+
 option(BUILD_TESTS "Build tests")
 
 set (CMAKE_CXX_STANDARD 20)
@@ -21,6 +22,8 @@ project(freeaoe)
 if(DEFAULT_DATA_PATH)
     add_definitions(-DDEFAULT_DATA_PATH=\"${DEFAULT_DATA_PATH}\")
 endif()
+
+list(APPEND CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}")
 
 #############################
 ## Compiler specific stuff ##
