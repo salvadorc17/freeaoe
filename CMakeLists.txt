@@ -120,6 +120,8 @@ else()
     find_package(ZLIB)
 endif()
 
+set(SFML_DIR "c:/SFML/lib/cmake/SFML")
+
 find_package(SFML COMPONENTS system window graphics REQUIRED)
 
 if (CMAKE_CXX_COMPILER_ID MATCHES "Clang")
